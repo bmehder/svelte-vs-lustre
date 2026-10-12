@@ -1,0 +1,15 @@
+node_modules/
+v4/build/
+v4/dist/
+v4-rsvp/build/
+v4-rsvp/dist/
+v4-packages/build/
+v4-packages/dist/
+
+# Local files
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+.vercel/

@@ -1,0 +1,1 @@
+import { main } from '../../build/dev/javascript/cheeky_tester/cheeky_tester.mjs'; main();

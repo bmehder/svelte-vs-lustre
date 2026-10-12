@@ -1,0 +1,24 @@
+{
+  "name": "svelte-vs-lustre",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "build:v4": "cd v4 && gleam run -m lustre/dev build --minify",
+    "check:v4": "cd v4 && gleam format --check src test && gleam test && node --test test/request_test.mjs",
+    "serve:v4": "python3 -m http.server 8081 --bind 127.0.0.1 --directory v4/dist",
+    "build:v4-rsvp": "cd v4-rsvp && gleam run -m lustre/dev build --minify",
+    "check:v4-rsvp": "cd v4-rsvp && gleam format --check src test && gleam test && node test/transport_test.mjs",
+    "serve:v4-rsvp": "python3 -m http.server 8082 --bind 127.0.0.1 --directory v4-rsvp/dist",
+    "build:v4-packages": "cd v4-packages && gleam run -m lustre/dev build --minify",
+    "check:v4-packages": "cd v4-packages && gleam format --check src test && gleam test && node test/transport_test.mjs",
+    "serve:v4-packages": "python3 -m http.server 8082 --bind 127.0.0.1 --directory v4-packages/dist"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "svelte": "5.57.2",
+    "svelte-check": "^4.0.0",
+    "tailwindcss": "^4.3.0",
+    "typescript": "^5.0.0"
+  }
+}
